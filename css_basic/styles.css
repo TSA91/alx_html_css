@@ -1,0 +1,46 @@
+/* Body container: A column layout */
+body {
+    display: flex;          /* Makes <body> a flex container */
+    flex-direction: column; /* Stacks <header>, <main>, and <footer> vertically */
+    margin: 0;              /* Removes default browser margins */
+    height: 100vh;          /* Full viewport height */
+}
+
+/* Main container: A row layout */
+main {
+    display: flex;          /* Makes <main> a flex container */
+    flex-direction: row;    /* Places <article> and <aside> horizontally */
+    flex: auto;             /* Automatically takes remaining space */
+}
+
+/* Article: Takes 2/3 of the space */
+article {
+    flex: 2;                /* Fills up 2 parts of the total space */
+    overflow-y: auto;       /* Allows vertical scrolling if needed */
+    background-color: #f0f0f0; /* Optional: background to distinguish the area */
+    padding: 10px;          /* Adds spacing inside the element */
+}
+
+/* Aside: Takes 1/3 of the space */
+aside {
+    flex: 1;                /* Fills up 1 part of the total space */
+    overflow-y: auto;       /* Allows vertical scrolling if needed */
+    background-color: #d9d9d9; /* Optional: background to distinguish the area */
+    padding: 10px;          /* Adds spacing inside the element */
+}
+
+/* Header: Fixed at the top */
+header {
+    background-color: #013220; /* Optional: background color for header */
+    color: white;           /* Text color */
+    padding: 10px;
+    text-align: center;     /* Centers the text */
+}
+
+/* Footer: Fixed at the bottom */
+footer {
+    background-color: #013220; /* Optional: background color for footer */
+    color: white;           /* Text color */
+    padding: 10px;
+    text-align: center;     /* Centers the text */
+}
