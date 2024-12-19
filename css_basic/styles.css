@@ -44,3 +44,82 @@ footer {
     padding: 10px;
     text-align: center;     /* Centers the text */
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* A clean, readable font */
+}
+
+/* Body: Styling the overall page */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header: Adding background and styles */
+header {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center; /* Centers items vertically */
+}
+
+header ul li {
+    margin-right: 20px;
+}
+
+header .logo {
+    font-size: 2rem; /* Makes the logo bigger */
+    margin-right: auto; /* Pushes other items to the right */
+}
+
+/* Main: Add a border and shadow for distinction */
+main {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+/* Article: Custom styles */
+article {
+    background-color: #e6f7ff; /* Light blue background */
+    color: #004466;
+    padding: 20px;
+    border: 2px dashed #3399cc; /* Dashed border for a unique look */
+    text-align: justify; /* Aligns text neatly */
+}
+
+article h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #002244;
+    text-align: center;
+}
+
+article p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Aside: Adding some contrast */
+aside {
+    background-color: #f8f8f8;
+    border-left: 3px solid #ccc;
+    padding: 15px;
+}
+
+/* Footer: Stylish footer */
+footer {
+    background-color: #ffffff;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
