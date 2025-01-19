@@ -1,0 +1,340 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #FF6565;
+    --color-dark: #071629;
+    --max-width: 1000px;
+}
+
+body {
+    font-family: "Source Sans Pro", Spin Cycle OT;
+    /* color: #fff; */
+    /* background: #323131; */
+    /* overflow-x: hidden; */
+    /* width: 100vw;
+      height: 100vh; */
+ } 
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    /* background-color: var(--color-dark); */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-logo img {
+    height: 32px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero-section {
+    color: white;
+    padding: 180px 0 90px;
+    text-align: center;
+    background-image: url('./images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: rgba(7, 22, 41, 0.9); */
+}
+
+.hero-container {
+    position: relative;
+    max-width: 637px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.hero-text {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .header-container {
+        position: relative;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #071629;
+        padding-top: 80px;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-top: 60px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-section {
+        padding: 220px 0 90px;
+    }
+
+    .services-grid,
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* What We Do Section */
+.what-we-do {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 90px 0;
+    color: var(--color-dark);
+}
+
+.what-we-do h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.section-text {
+    max-width: 637px;
+    margin: 0 auto 40px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 40px;
+max-width: var(--max-width);
+margin: 0 auto;
+}
+
+.service-item {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-item img {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+}
+
+.styled-icon {
+    font-size: 50px;
+    color: var(--color-primary)
+}
+
+.services-grid .service-item p {
+    font-size: 0.9rem;
+}
+
+/* Our Results Section */
+.our-results {
+    padding: 50px 20px;
+    background-image: url('./images/headphones_hero_2.jpg');
+    text-align: center;
+  }
+  
+  .our-results h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white
+  }
+  
+  .our-results .section-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .our-results .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .our-results .service-item {
+    position: relative;
+    width: 200px; /* Adjust size to fit pentagon */
+    height: 200px; /* Ensure it matches the pentagon aspect ratio */
+    text-align: center;
+  }
+  
+  .our-results .service-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .our-results .service-item h3,
+  .our-results .service-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+  }
+  
+  .our-results .service-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* Ensure visibility on the pentagon */
+  }
+  
+  .our-results .service-item p {
+    font-size: 0.6rem;
+    color: #fff; /* Same as h3 for consistency */
+    margin-top: 40px;
+  }
